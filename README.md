@@ -3,11 +3,12 @@ Blocks porxies from every botetr yo usend to the specifed random port its listen
 
 🛠️ | Requirements:
 
- For Random port listening for tcp connectio nthat will type every connection from proxy to connections.txt:
+* For Random port listening for tcp connectio that  will type every connection from proxy to connections.txt:
   - ```apt install go-golang```
   - download the kokot.go
-  - ```go run kokot.go``` or ```go build kokot.go```, for go build kokot.go aftert hat you need to type ```./kokot``` to stat it.
- For Minecraft serevr with sonar antibot:
+  - ```go run kokot.go``` or ```go build kokot.go```, for go build kokot.go aftert hat you need to type ```./kokot``` to start it.
+   
+* For Minecraft serevr with sonar antibot:
   - Waterfall.jar from [Contribution guidelines for this project](https://papermc.io/software/waterfall)
   - start the WaterFall.jar and configure config.yml.
   - now add sonar.jar to plugins with luckperms-bungee.
