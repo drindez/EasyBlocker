@@ -7,6 +7,7 @@ This project si for Blocking proxies from every botter you send to the specifed 
 
 
 🛠️ | Requirements:
+
 (( Installing the needed things fro this program ))
 
 * For Random port listening for tcp connectio that  will type every connection from proxy to connections.txt:
@@ -24,6 +25,7 @@ This project si for Blocking proxies from every botter you send to the specifed 
   - after that go to your plugins folder and find sonar folder and after you get in there will be your blacklist.txt file!.
   
 📋 | Iptables + IPset: 
+
 (( For adding the ips to list and dropping their connection ))
 
  - At first you need to install ipset and iptables using command: apt install ipset, apt install iptables
@@ -34,5 +36,6 @@ This project si for Blocking proxies from every botter you send to the specifed 
  - After you are done adding this into the ipset you need to drop the ips from ipset using this iptables command: ```sudo iptables -A INPUT -m set --match-set blocked_ips src -j DROP```
  
  🐛 | Issues:
+ 
  (( If you have any Issues with this contact me on social media ))
   - DISCORD: **Looph#2695**
