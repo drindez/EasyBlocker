@@ -24,9 +24,9 @@ This project si for Blocking proxies from every botter you send to the specifed 
   
 📋 | Iptables + IPset: 
 
- At first you need to install ipset and iptables using command: apt install ipset, apt install iptables
- after you install them you will create your ipset using command: ```ipset create blocked_ips hash:ip```
- after that you will add your ips from connections.txt or blacklsit.txt from sonar to the ipset using this commands:
-  For kokot.go: ```while IFS= read -r ip; do     sudo ipset add blocked_ips "$ip"; done < "connections.txt"```
-  For Sonar.jar: ```while IFS= read -r ip; do     sudo ipset add blocked_ips "$ip"; done < "your blacklist file.txt"```
- After you are done adding this into the ipset you need to drop the ips from ipset using this iptables command: ```sudo iptables -A INPUT -m set --match-set blocked_ips src -j DROP```
+ - At first you need to install ipset and iptables using command: apt install ipset, apt install iptables
+ - after you install them you will create your ipset using command: ```ipset create blocked_ips hash:ip```
+ - after that you will add your ips from connections.txt or blacklsit.txt from sonar to the ipset using this commands:
+  - For kokot.go: ```while IFS= read -r ip; do     sudo ipset add blocked_ips "$ip"; done < "connections.txt"```
+  - For Sonar.jar: ```while IFS= read -r ip; do     sudo ipset add blocked_ips "$ip"; done < "your blacklist file.txt"```
+ -After you are done adding this into the ipset you need to drop the ips from ipset using this iptables command: ```sudo iptables -A INPUT -m set --match-set blocked_ips src -j DROP```
