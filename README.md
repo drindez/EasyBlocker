@@ -1,7 +1,8 @@
 # EasyBlocker
 Blocks porxies from every botetr yo usend to the specifed random port its listening to or minecraf tserver using sonar antibot with ab blacklist save or firewall.yml set to true
 
-🛠️ | Requirements
+🛠️ | Requirements:
+
  For Random port listening for tcp connectio nthat will type every connection from proxy to connections.txt:
   - ```apt install go-golang```
   - download the kokot.go
@@ -16,6 +17,7 @@ Blocks porxies from every botetr yo usend to the specifed random port its listen
   - after that go to your plugins folder and find sonar folder and after you get in there will be your blacklist.txt file!.
   
 📋 | Iptables + IPset: 
+
  At first you need to install ipset and iptables using command: apt install ipset, apt install iptables
  after you install them you will create your ipset using command: ```ipset create blocked_ips hash:ip```
  after that you will add your ips from connections.txt or blacklsit.txt from sonar to the ipset using this commands:
