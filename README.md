@@ -1,5 +1,7 @@
 # EasyBlocker
 
++ MADE BY LOOPH!
+
 ## Whats is this project?
 This project si for Blocking proxies from every botter you send to the specifed random port its listening or minecraft server using sonar antibot with ab blacklist save or firewall.yml set to true
 
