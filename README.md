@@ -1,41 +1,38 @@
-# EasyBlocker
-
-+ MADE BY LOOPH!
-
-## Whats is this project?
-This project si for Blocking proxies from every botter you send to the specifed random port its listening or minecraft server using sonar antibot with ab blacklist save or firewall.yml set to true
-
+EasyBlocker
+CREATED BY Lopusnik!
+What is this project?
+This project is designed to block proxies and prevent botters from connecting to a specified random port or a Minecraft server equipped with the Sonar antibot feature. It employs an anti-bot blacklist for enhanced security, which can be enabled by setting firewall.yml to "true."
 
 🛠️ | Requirements:
 
-(( Installing the needed things fro this program ))
+(( Installation of necessary components for this program ))
 
-* For Random port listening for tcp connectio that  will type every connection from proxy to connections.txt:
-  - ```apt install go-golang```
-  - download the kokot.go
-  - ```go run kokot.go``` or ```go build kokot.go```, for go build kokot.go aftert hat you need to type ```./kokot``` to start it.
-   
-* For Minecraft serevr with sonar antibot:
-  - Waterfall.jar from [here](https://papermc.io/software/waterfall)
-  - start the WaterFall.jar and configure config.yml.
-  - now add sonar.jar to plugins with luckperms-bungee.
-  - after you added sonar and luckperms restart the server.
-  - when you join the bungeecord server type this command into console: ```lp user <Your Minecraft NickName> permission set *```, this command will grand you full permissions for the serevr and sonar plugin.
-  - after that get your public ipv4 ip with port 25577 if you didnt change it in the config.yml and start your attack there after the attack type ab blacklist save, you will get message into chat what name it has.
-  - after that go to your plugins folder and find sonar folder and after you get in there will be your blacklist.txt file!.
-  
-📋 | Iptables + IPset: 
+For random port listening for TCP connections and logging every proxy connection to connections.txt:
 
-(( For adding the ips to list and dropping their connection ))
+Install Go (golang): ```apt install go-golang```
+Download the kokot.go file.
+Run kokot.go using either ```go run kokot.go``` or compile it with ```go build kokot.go```. After compiling, start it with ```./kokot```.
+For a Minecraft server with Sonar antibot:
 
- - At first you need to install ipset and iptables using command: apt install ipset, apt install iptables
- - after you install them you will create your ipset using command: ```ipset create blocked_ips hash:ip```
- - after that you will add your ips from connections.txt or blacklsit.txt from sonar to the ipset using this commands:
-  - For kokot.go: ```while IFS= read -r ip; do     sudo ipset add blocked_ips "$ip"; done < "connections.txt"```
-  - For Sonar.jar: ```while IFS= read -r ip; do     sudo ipset add blocked_ips "$ip"; done < "yourblacklist.txt"```
- - After you are done adding this into the ipset you need to drop the ips from ipset using this iptables command: ```sudo iptables -A INPUT -m set --match-set blocked_ips src -j DROP```
- 
- 🐛 | Issues:
- 
- (( If you have any Issues with this contact me on social media ))
-  - DISCORD: **Looph#2695**
+Obtain Waterfall.jar from [here](https://papermc.io/software/waterfall).
+Start the WaterFall.jar and configure config.yml.
+Add the sonar.jar to the plugins directory along with luckperms-bungee.
+After adding Sonar and Luckperms, restart the server.
+When you join the BungeeCord server, enter the following command into the console: ```lp user <Your Minecraft NickName> permission set *```. This command grants you full server permissions and access to the Sonar plugin.
+Afterward, use your public IPv4 address with port 25577 (if you haven't modified it in config.yml) for your attack. After the attack, run the command ab blacklist save to receive a message in the chat indicating the name of the blacklist.
+To access your blacklist.txt file, navigate to the plugins folder and find the Sonar folder.
+📋 | Iptables + IPset:
+
+(( Adding IP addresses to the list and blocking their connections ))
+
+First, install ipset and iptables using the following commands: apt install ipset and apt install iptables.
+Create an IP set with the command: ipset create blocked_ips hash:ip.
+Add IP addresses from connections.txt or yourblacklist.txt (for Sonar.jar) to the IP set using the following commands:
+For kokot.go: ```while IFS= read -r ip; do sudo ipset add blocked_ips "$ip"; done < "connections.txt"```
+For Sonar.jar: ```while IFS= read -r ip; do sudo ipset add blocked_ips "$ip"; done < "yourblacklist.txt"```
+Once you have added the IP addresses to the IP set, use the following iptables command to drop connections from the IP set: ```sudo iptables -A INPUT -m set --match-set blocked_ips src -j DROP```
+🐛 | Issues:
+
+(( If you encounter any issues, please contact me on social media ))
+
+DISCORD: lopusnik1337
