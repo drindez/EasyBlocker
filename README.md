@@ -1,6 +1,5 @@
 Certainly! Here’s how you can format the content in a `README.md` file for GitHub:
 
-```markdown
 # EasyBlocker
 
 **CREATED BY Lopusnik!**
